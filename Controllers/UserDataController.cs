@@ -90,5 +90,32 @@ namespace SpotifyClone.Controllers
             return BadRequest($"Failed to fetch albums {responseBody}");
         }
         #endregion
+
+        #region Search
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchSpotify([FromHeader] string accessToken, [FromQuery] string query, [FromQuery] string type = "track", [FromQuery] int limit = 10)
+        {
+            if (string.IsNullOrEmpty(query))
+            {
+                return BadRequest("Query parameter is required.");
+            }
+
+            var url = $"https://api.spotify.com/v1/search?q={Uri.EscapeDataString(query)}&type={type}&limit={limit}";
+
+            using var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+
+            var response = await client.GetAsync(url);
+            var responseBody = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Ok(responseBody); 
+            }
+
+            return BadRequest($"Failed to search Spotify. {responseBody}");
+        }
+        #endregion
+
     }
 }

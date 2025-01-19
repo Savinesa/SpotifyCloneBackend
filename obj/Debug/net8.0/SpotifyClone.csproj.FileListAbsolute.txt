@@ -32,3 +32,4 @@ C:\Personal\Tech Projects\SpotifyClone\SpotifyClone\obj\Debug\net8.0\refint\Spot
 C:\Personal\Tech Projects\SpotifyClone\SpotifyClone\obj\Debug\net8.0\SpotifyClone.pdb
 C:\Personal\Tech Projects\SpotifyClone\SpotifyClone\obj\Debug\net8.0\SpotifyClone.genruntimeconfig.cache
 C:\Personal\Tech Projects\SpotifyClone\SpotifyClone\obj\Debug\net8.0\ref\SpotifyClone.dll
+C:\Personal\Tech Projects\SpotifyClone\SpotifyClone\obj\Debug\net8.0\SpotifyClone.sourcelink.json
