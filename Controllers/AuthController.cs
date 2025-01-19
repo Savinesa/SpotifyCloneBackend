@@ -93,42 +93,7 @@ namespace SpotifyClone.Controllers
         }
         #endregion
 
-        //[HttpGet("callback")]
-        //public async Task<IActionResult> HandleSpotifyCallback(string code)
-        //{
-        //    var clientId = "91a08a67dac54bd4aaa128b7c88b6d2c";
-        //    var clientSecret = "bc1806d598bc45d2862f3068fd5bfc57";
-        //    var redirectUri = "https://localhost:7169/api/auth/callback";
-        //    var tokenUrl = "https://accounts.spotify.com/api/token";
-
-        //    using var client = new HttpClient();
-
-        //    // Request body for token exchange
-        //    var requestBody = new Dictionary<string, string>
-        //    {
-        //        { "grant_type", "authorization_code" },
-        //        { "code", code },
-        //        { "redirect_uri", redirectUri },
-        //        { "client_id", clientId },
-        //        { "client_secret", clientSecret }
-        //    };
-
-        //    var requestContent = new FormUrlEncodedContent(requestBody);
-        //    var response = await client.PostAsync(tokenUrl, requestContent);
-        //    var responseBody = await response.Content.ReadAsStringAsync();
-
-        //    if (response.IsSuccessStatusCode)
-        //    {
-        //        // Deserialize the JSON response to extract the access_token
-        //        var tokenData = System.Text.Json.JsonSerializer.Deserialize<TokenResponse>(responseBody);
-        //        if (tokenData != null && !string.IsNullOrEmpty(tokenData.access_token))
-        //        {
-        //            return Ok(tokenData.access_token); // Return just the access_token as a string
-        //        }
-        //        return BadRequest("Access token not found in the response.");
-        //    }
-        //    return BadRequest($"Failed to exchange token. {responseBody}");
-        //}
+      
 
     }
 }

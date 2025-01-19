@@ -21,7 +21,7 @@ namespace SpotifyClone.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                return Ok(responseBody); // Return the top tracks as JSON
+                return Ok(responseBody);
             }
 
             return BadRequest($"Failed to fetch top tracks. {responseBody}");
@@ -42,7 +42,7 @@ namespace SpotifyClone.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                return Ok(responseBody); // Return the top artists as JSON
+                return Ok(responseBody); 
             }
 
             return BadRequest($"Failed to fetch top artists. {responseBody}");
@@ -63,7 +63,7 @@ namespace SpotifyClone.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                return Ok(responseBody); // Return albums as JSON
+                return Ok(responseBody);
             }
 
             return BadRequest($"Failed to fetch albums for artist {artistId}. {responseBody}");
@@ -84,7 +84,7 @@ namespace SpotifyClone.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                return Ok(responseBody); // Return albums as JSON
+                return Ok(responseBody); 
             }
 
             return BadRequest($"Failed to fetch albums {responseBody}");
